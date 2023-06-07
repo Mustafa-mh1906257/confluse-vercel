@@ -1,0 +1,161 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+}
+
+.organizer-section-container {
+    display: none;
+}
+
+label {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 1rem;
+    color: #2C2C2C;
+}
+
+input {
+    width: 50%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    color: #2C2C2C;
+}
+
+.filtering-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(206, 215, 244, 0.514);
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.papers-container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.schedule-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    border: 1px #2C2C2C solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    color: #222222;
+    width: 800px;
+    height: 220px;
+    border-radius: 20px;
+}
+
+.card h4 {
+    font-weight: 900;
+}
+
+.schedule-card img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.card-info {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-main-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.card-info-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#card-time{
+    color: #3658C1;
+}
+
+.card-info p {
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 767px){
+
+    .filtering-container{
+        padding: 3rem;
+    }
+    .papers-container{
+        padding: 0 1rem;
+        width: 80%;
+    }
+
+    .schedule-card{
+        width: 100%;
+    }
+
+    .card{
+        transition: 0.3s;
+        height: 240px;
+    }
+
+    .card-info-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .card-info p {
+        -webkit-line-clamp: 5;
+    }
+}

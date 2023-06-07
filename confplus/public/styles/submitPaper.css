@@ -1,0 +1,167 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+main {
+    padding: 2rem 2rem;
+    background-color: #f7f7f7;
+    margin: 0 auto;
+    border-radius: 2rem;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    position: relative;
+    display: inline-block;
+    width: 700px;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 40px 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 5px #AFC1D0;
+}
+
+fieldset:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 10px 18px #AFC1D0;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+
+.form-group label {
+    transform-origin: left center;
+    color: #3658C1;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    pointer-events: none;
+}
+
+.form-group input[type="text"],
+input[type="email"],
+input[type="url"] {
+    appearance: none;
+    background-color: none;
+    border: 1px solid black;
+    line-height: 0;
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 1rem;
+    color: #2c2c2c;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    /* position: relative; */
+    z-index: 1;
+}
+
+.form-group input[type="text"]:valid~label,
+input[type="email"]:valid~label,
+input[type="url"]:valid~label
+{
+    display: none;
+}
+
+select{
+    padding: 10px 15px;
+    border-radius: 1rem;
+    color: #3658C1;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+}
+
+select:valid,
+option{
+    color: #2c2c2c;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 1rem;
+    background: #f7f7f7;
+    color: #2c2c2c;
+    border: 1px solid black;
+    text-indent: 1rem;
+    padding-top: 1rem;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #3658C1;
+}
+
+.authors {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#presenter-container,
+#extra-author-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.section-title {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    padding: 0.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+#submit-paper{
+    width: 150px;
+}
+
+.author-btns {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+#add-author,
+#delete-author {
+    width: 100%;
+}
+
+@media screen and (max-width: 767px){
+    main{
+        width: 40%;
+    }
+    fieldset{
+        width: auto;
+    }
+}

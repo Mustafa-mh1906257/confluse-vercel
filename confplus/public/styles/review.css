@@ -1,0 +1,221 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+
+.main-container {
+    flex: 1;
+    padding: 20px 30px;
+}
+
+.paper-container {
+    display: flex;
+    text-align: center;
+}
+
+.paper-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.paper-details h1,
+.paper-details p {
+    margin-bottom: 10px;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.authors h5{
+    border: 2px #2c2c22 solid;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.presenter-container {
+    position: relative;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+.staff-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    width: 350px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: .5s;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image:hover img {
+    opacity: 0.4;
+    transition: .5s;
+}
+
+.staff-card:hover .card-image {
+    transform: translateY(-100px);
+    transition: all .9s;
+}
+
+.details {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    bottom: 0;
+    left: 0;
+    background: #ccc;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+}
+
+h2 {
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.affiliation-email {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #2c2c22;
+    font-weight: 300;
+}
+
+.evaluation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.evaluation-form h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+textarea {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.textarea p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    height: 50px;
+    padding: 30px 10px;
+    margin-bottom: 10px;
+}
+
+.title-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title-card h1::before {
+    content: ">";
+    margin-right: 10px;
+}
+
+ion-icon {
+    margin-left: auto;
+    font-size: 25px;
+}
+
+.header-btns{
+    width: 150px;
+}
+
+@media screen and (max-width: 767px){
+    header h4{
+        padding: 0 30px;
+    }
+
+    .paper-container{
+        flex-direction: column;
+    }
+}
